@@ -8,17 +8,17 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-declare (strict_types = 1);
+declare (strict_types=1);
 
 namespace Think\Component\Cache\Facade;
 
-use Think\Component\Cache\Cache\Driver;
-use Think\Component\Cache\Cache\TagSet;
+use Think\Component\Cache\Driver;
+use Think\Component\Cache\TagSet;
 use Think\Component\Facade\Facade;
 
 /**
  * @see \Think\Component\Cache\Cache
- * @package think\facade
+ * @package Think\Component\Cache\Facade
  * @mixin \Think\Component\Cache\Cache
  * @method static string|null getDefaultDriver() 默认驱动
  * @method static mixed getConfig(null|string $name = null, mixed $default = null) 获取缓存配置
@@ -43,6 +43,6 @@ class Cache extends Facade
      */
     protected static function getFacadeClass()
     {
-        return '\Think\Component\Cache\Cache';
+        return 'Think\Component\Cache\Cache';
     }
 }

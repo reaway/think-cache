@@ -24,7 +24,7 @@ use Think\Component\Cache\TagSet;
  */
 class Cache extends Manager implements CacheInterface
 {
-    protected $namespace = '\\Think\\Component\\Cache\\Driver\\';
+    protected $namespace = 'Think\\Component\\Cache\\Driver\\';
 
     /**
      * 配置参数
