@@ -39,4 +39,4 @@ Cache::get('key');
 
 ## 文档
 
-详细参考 [缓存](https://www.kancloud.cn/manual/thinkphp6_0/1037634)
+详细参考 [缓存处理](https://www.kancloud.cn/manual/thinkphp6_0/1037634)
