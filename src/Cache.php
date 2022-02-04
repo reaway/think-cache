@@ -71,13 +71,29 @@ class Cache extends Manager implements CacheInterface
      */
     public function getDefaultDriver()
     {
-        return $this->config['default'];
+        return $this->getConfig('default');
+    }
+
+    /**
+     * 获取缓存配置
+     * @access public
+     * @param null|string $name    名称
+     * @param mixed       $default 默认值
+     * @return mixed
+     */
+    public function getConfig(string $name = null, $default = null)
+    {
+        if (!is_null($name)) {
+            return $this->config[$name] ?? $default;
+        }
+
+        return $this->config;
     }
 
     /**
      * 获取驱动配置
      * @param string $store
-     * @param string|null $name
+     * @param string $name
      * @param null $default
      * @return array
      */
@@ -103,7 +119,7 @@ class Cache extends Manager implements CacheInterface
     /**
      * 连接或者切换缓存
      * @access public
-     * @param string|null $name 连接配置名
+     * @param string $name 连接配置名
      * @return Driver
      */
     public function store(string $name = null)

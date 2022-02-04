@@ -36,3 +36,7 @@ Cache::setConfig([
 Cache::set('key', 'value');
 Cache::get('key');
 ```
+
+## 文档
+
+详细参考 [缓存](https://www.kancloud.cn/manual/thinkphp6_0/1037634)
