@@ -24,7 +24,7 @@ if (!function_exists('cache')) {
     function cache(string $name = null, $value = '', $options = null, $tag = null)
     {
         if (is_null($name)) {
-            return app('cache');
+            return container('cache');
         }
 
         if ('' === $value) {
