@@ -55,39 +55,12 @@ class Cache extends Manager implements CacheInterface
     ];
 
     /**
-     * 设置配置
-     * @access public
-     * @param array $config 配置参数
-     * @return void
-     */
-    public function setConfig(array $config): void
-    {
-        $this->config = array_merge($this->config, $config);
-    }
-
-    /**
      * 默认驱动
      * @return string|null
      */
     public function getDefaultDriver()
     {
         return $this->getConfig('default');
-    }
-
-    /**
-     * 获取缓存配置
-     * @access public
-     * @param null|string $name    名称
-     * @param mixed       $default 默认值
-     * @return mixed
-     */
-    public function getConfig(string $name = null, $default = null)
-    {
-        if (!is_null($name)) {
-            return $this->config[$name] ?? $default;
-        }
-
-        return $this->config;
     }
 
     /**
