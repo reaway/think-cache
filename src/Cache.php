@@ -18,6 +18,7 @@ use Think\Component\Manager\Manager;
 use Think\Component\Cache\Exception\InvalidArgumentException;
 use Think\Component\Cache\Driver;
 use Think\Component\Cache\TagSet;
+use Think\Component\Config\Config;
 
 /**
  * 缓存管理类
@@ -53,6 +54,11 @@ class Cache extends Manager implements CacheInterface
             // 更多的缓存连接
         ],
     ];
+
+    public static function __make(Config $config)
+    {
+        return new static($config->get('cache'));
+    }
 
     /**
      * 默认驱动
